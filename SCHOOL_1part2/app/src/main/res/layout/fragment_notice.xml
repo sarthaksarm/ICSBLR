@@ -154,12 +154,23 @@
 
             </LinearLayout>
 
-
-
-
-            <Space
+            <Button
+                android:id="@+id/add_marksbtn"
                 android:layout_width="match_parent"
-                android:layout_height="30dp" />
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:text="ADD MARKS"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFFFFF"
+                android:background="@color/colorOrange"/>
+
+
+
+<!--            <Space-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp" />-->
 
 
             <Space

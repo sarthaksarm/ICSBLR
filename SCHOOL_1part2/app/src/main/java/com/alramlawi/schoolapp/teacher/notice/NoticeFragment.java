@@ -24,6 +24,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alramlawi.schoolapp.HttpParse;
 import com.alramlawi.schoolapp.R;
+import com.alramlawi.schoolapp.teacher.Marksact;
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;
@@ -84,6 +85,8 @@ public class NoticeFragment extends Fragment {
     String timeHolder = "";
     String timeHold = "";
 
+    Button addmarksbtn;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_notice, container, false);
 
@@ -98,6 +101,8 @@ public class NoticeFragment extends Fragment {
         Message = root.findViewById(R.id.edit_message);
         Send = root.findViewById(R.id.btnSend_note);
 
+        addmarksbtn=root.findViewById(R.id.add_marksbtn);
+
         carouselView=root.findViewById(R.id.carouselView);
         mImagesu=new ArrayList<>();
         mImagesu.add("https://firebasestorage.googleapis.com/v0/b/icsblr.appspot.com/o/slider%201.jpg?alt=media&token=6de60205-85f1-4a53-b44e-197ffc04a47c");
@@ -108,13 +113,17 @@ public class NoticeFragment extends Fragment {
         carouselView.setPageCount(mImagesu.size());
         carouselView.setImageListener(imageListener);
 
-
+        addmarksbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getContext(), Marksact.class);
+                startActivity(i);
+            }
+        });
 
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 getTypeAndtarget();
                 CheckEditTextIsEmptyOrNot();
                 if (CheckEditText) {
