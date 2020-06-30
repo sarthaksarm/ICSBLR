@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.alramlawi.schoolapp.R;
 import com.alramlawi.schoolapp.Student_att;
+import com.alramlawi.schoolapp.Student_result;
 import com.alramlawi.schoolapp.elements.Approval;
 import com.alramlawi.schoolapp.student.InboxAdapter;
 import com.bumptech.glide.Glide;
@@ -52,13 +53,14 @@ public class InboxFragment extends Fragment{
     List<String> mImagesu;
     Button button;
     Intent intent;
-
+    Button resbtn;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_inbox, container, false);
         list = root.findViewById(R.id.inboxList);
 
         button = root.findViewById(R.id.std_att_btn);
+        resbtn=root.findViewById(R.id.std_res_btn);
 
         password = getActivity().getIntent().getExtras().getString("password");
         name = getActivity().getIntent().getExtras().getString("name");
@@ -74,9 +76,6 @@ public class InboxFragment extends Fragment{
         carouselView.setImageListener(imageListener);
 
 
-
-
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +85,17 @@ public class InboxFragment extends Fragment{
                 getContext().startActivity(intent);
             }
         });
+
+        resbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent=new Intent(getContext(), Student_result.class);
+                intent.putExtra("name", name);
+                intent.putExtra("tableName", tableHolder);
+                getContext().startActivity(intent);
+            }
+        });
+
         root.findViewById(R.id.track).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

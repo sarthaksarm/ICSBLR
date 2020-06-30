@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 db_password = sharedPreferences.getString("lock", "");
                 if(db_password.equals("teacher_open")){
+
                     UserHolder = sharedPreferences.getString("name", "");
                     PasswordHolder = sharedPreferences.getString("password", "");
                     intent = new Intent(MainActivity.this, Teacher.class);
