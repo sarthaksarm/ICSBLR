@@ -30,8 +30,6 @@ public class Marksact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marksact);
 
-        //fetch stud_id from intent upon click of which this activity is opened from.
-
         studid=findViewById(R.id.idedit);
 
         sub1score=findViewById(R.id.sub1scoreedit);
@@ -57,70 +55,32 @@ public class Marksact extends AppCompatActivity {
 
                 String stud_id=studid.getText().toString();  //update stud_id here.
 
-                float sub1= Float.parseFloat(sub1score.getText().toString());
-                float sub1tot=Float.parseFloat(sub1total.getText().toString());
+                String sub1= sub1score.getText().toString();
+                String sub1tot=sub1total.getText().toString();
 
-                float sub2= Float.parseFloat(sub2score.getText().toString());
-                float sub2tot=Float.parseFloat(sub2total.getText().toString());
+                String sub2= sub2score.getText().toString();
+                String sub2tot=sub2total.getText().toString();
 
-                float sub3= Float.parseFloat(sub3score.getText().toString());
-                float sub3tot=Float.parseFloat(sub3total.getText().toString());
+                String sub3= sub3score.getText().toString();
+                String sub3tot=sub3total.getText().toString();
 
-                float sub4= Float.parseFloat(sub4score.getText().toString());
-                float sub4tot=Float.parseFloat(sub4total.getText().toString());
+                String sub4= sub4score.getText().toString();
+                String sub4tot=sub4total.getText().toString();
 
-                float sub5= Float.parseFloat(sub5score.getText().toString());
-                float sub5tot=Float.parseFloat(sub5total.getText().toString());
+                String sub5= sub5score.getText().toString();
+                String sub5tot=sub5total.getText().toString();
+
+                BackgroundTask backgroundTask=new BackgroundTask(view.getContext());
+                backgroundTask.execute(sub1,sub1tot,sub2,sub2tot,sub3,sub3tot,sub4,sub4tot,sub5,sub5tot,stud_id);
+
+                Toast.makeText(Marksact.this, "Marks are entered!", Toast.LENGTH_SHORT).show();
+
 
                 //save scores where student_id=stud_id;
                 //String stud_url="https://schoolmanager000.000webhostapp.com/Students/add_marks.php";
-                String stud_url="http://dwaipayanatechnologies.com/dwaipayanatech/db/Students/add_marks.php";
 
-                try {
-                    URL url=new URL(stud_url);
-                    HttpURLConnection httpURLConnection=(HttpURLConnection) url.openConnection();
-                    httpURLConnection.setRequestMethod("POST");
-                    httpURLConnection.setDoOutput(true);
-                    OutputStream OS=httpURLConnection.getOutputStream();
-                    BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
-
-
-                    String data= URLEncoder.encode("stud_id","UTF-8")+" = "+URLEncoder.encode(stud_id+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub1","UTF-8")+" = "+URLEncoder.encode(sub1+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub1tot","UTF-8")+" = "+URLEncoder.encode(sub1tot+"","UTF-8")+"&"+
-
-                            URLEncoder.encode("sub2","UTF-8")+" = "+URLEncoder.encode(sub2+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub2tot","UTF-8")+" = "+URLEncoder.encode(sub2tot+"","UTF-8")+"&"+
-
-                            URLEncoder.encode("sub3","UTF-8")+" = "+URLEncoder.encode(sub3+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub3tot","UTF-8")+" = "+URLEncoder.encode(sub3tot+"","UTF-8")+"&"+
-
-                            URLEncoder.encode("sub4","UTF-8")+" = "+URLEncoder.encode(sub4+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub4tot","UTF-8")+" = "+URLEncoder.encode(sub4tot+"","UTF-8")+"&"+
-
-                            URLEncoder.encode("sub5","UTF-8")+" = "+URLEncoder.encode(sub5+"","UTF-8")+"&"+
-                            URLEncoder.encode("sub5tot","UTF-8")+" = "+URLEncoder.encode(sub5tot+"","UTF-8");
-
-                    bufferedWriter.write(data);
-                    bufferedWriter.flush();
-                    bufferedWriter.close();
-                    OS.close();
-
-                    InputStream IS=httpURLConnection.getInputStream();
-                    IS.close();
-
-                    Toast.makeText(Marksact.this, "Marks are entered!", Toast.LENGTH_SHORT).show();
-
-                    onBackPressed();
-                    finish();  //move to last activity for other students and close this activity
-
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-
+                onBackPressed();
+                finish();  //move to last activity for other students and close this activity
             }
         });
 
