@@ -25,5 +25,6 @@ public class Student_result extends AppCompatActivity {
         //update content now.
 
 
+
     }
 }

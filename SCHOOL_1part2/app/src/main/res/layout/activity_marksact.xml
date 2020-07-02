@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alramlawi.schoolapp.teacher.Marksact">
+    tools:context="com.alramlawi.schoolapp.teacher.Marksact"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,13 +24,46 @@
         />
 
     <LinearLayout
-        android:id="@+id/linearlt1"
-        android:layout_marginTop="70dp"
+        android:id="@+id/linearltid"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/resheadingtxt"
+        >
+        <TextView
+            android:id="@+id/idtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stuent ID"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textSize="18dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idedit"
+            android:text="1"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            >
+
+        </EditText>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlt1"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearltid"
         >
         <TextView
             android:id="@+id/sub1txt"
@@ -276,3 +313,5 @@
         android:background="@color/colorOrange"/>
 
 </RelativeLayout>
+
+</ScrollView>

@@ -44,7 +44,6 @@
         android:text="78/100"
         android:textSize="18dp"
         android:layout_marginStart="50dp"
-
         />
 
     </LinearLayout>

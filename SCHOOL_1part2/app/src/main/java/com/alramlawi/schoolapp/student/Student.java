@@ -23,13 +23,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class Student extends AppCompatActivity {
-
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 //        DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -68,8 +68,6 @@ public class Student extends AppCompatActivity {
 //                        break;
 //
 //                }
-//
-//
 //                return true;
 //            }
 //        });

@@ -25,8 +25,8 @@
         <!-- android:label="@string/title_activity_student" -->
         <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
         <activity
-            android:name=".student.Student"
-            android:label="@string/title_activity_student"
+            android:name=".teacher.Teacher"
+            android:label="@string/title_activity_teacher"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,8 +45,8 @@
             android:label="@string/title_activity_admin"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".teacher.Teacher"
-            android:label="@string/title_activity_teacher"
+            android:name=".student.Student"
+            android:label="@string/title_activity_student"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity" />
 

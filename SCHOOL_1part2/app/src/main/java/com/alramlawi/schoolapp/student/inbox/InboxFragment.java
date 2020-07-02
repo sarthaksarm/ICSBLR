@@ -62,8 +62,8 @@ public class InboxFragment extends Fragment{
         button = root.findViewById(R.id.std_att_btn);
         resbtn=root.findViewById(R.id.std_res_btn);
 
-        password = getActivity().getIntent().getExtras().getString("password");
-        name = getActivity().getIntent().getExtras().getString("name");
+       // password = getActivity().getIntent().getExtras().getString("password");
+     //   name = getActivity().getIntent().getExtras().getString("name");
         //tableHolder = getActivity().getIntent().getExtras().getString("name");
         carouselView=root.findViewById(R.id.carouselView);
         mImagesu=new ArrayList<>();

@@ -23,6 +23,7 @@ import java.net.URLEncoder;
 public class Marksact extends AppCompatActivity {
     EditText sub1score,sub1total,sub2score,sub2total,sub3score,sub3total,sub4score,sub4total,sub5score,sub5total;
     Button submitbtn;
+    EditText studid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,8 @@ public class Marksact extends AppCompatActivity {
         setContentView(R.layout.activity_marksact);
 
         //fetch stud_id from intent upon click of which this activity is opened from.
-        final String stud_id="1";  //update stud_id here.
+
+        studid=findViewById(R.id.idedit);
 
         sub1score=findViewById(R.id.sub1scoreedit);
         sub1total=findViewById(R.id.sub1totaledit);
@@ -52,6 +54,9 @@ public class Marksact extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String stud_id=studid.getText().toString();  //update stud_id here.
+
                 float sub1= Float.parseFloat(sub1score.getText().toString());
                 float sub1tot=Float.parseFloat(sub1total.getText().toString());
 
@@ -68,8 +73,9 @@ public class Marksact extends AppCompatActivity {
                 float sub5tot=Float.parseFloat(sub5total.getText().toString());
 
                 //save scores where student_id=stud_id;
+                //String stud_url="https://schoolmanager000.000webhostapp.com/Students/add_marks.php";
+                String stud_url="http://dwaipayanatechnologies.com/dwaipayanatech/db/Students/add_marks.php";
 
-                String stud_url="https://schoolmanager000.000webhostapp.com/Students/add_marks.php";
                 try {
                     URL url=new URL(stud_url);
                     HttpURLConnection httpURLConnection=(HttpURLConnection) url.openConnection();
