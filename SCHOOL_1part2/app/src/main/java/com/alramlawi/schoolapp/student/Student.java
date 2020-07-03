@@ -30,25 +30,25 @@ public class Student extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-//        NavigationView navigationView = findViewById(R.id.student_nav_view);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.student_nav_view);
+
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_inbox, R.id.nav_settings, R.id.nav_contactUs)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+
+
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.student_nav_view);
 //
-//        // Passing each menu ID as a set of Ids because each
-//        // menu should be considered as top level destinations.
-//
-//        mAppBarConfiguration = new AppBarConfiguration.Builder(
-//                R.id.nav_inbox, R.id.nav_settings, R.id.nav_contactUs)
-//                .setDrawerLayout(drawer)
-//                .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-//        NavigationUI.setupWithNavController(navigationView, navController);
-
-
-        //NavigationView navigationView = (NavigationView) findViewById(R.id.student_nav_view);
-
 //        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 //
 //            @Override
@@ -74,11 +74,11 @@ public class Student extends AppCompatActivity {
 
 
     }
-//
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
+    }
 }

@@ -36,7 +36,7 @@
             android:id="@+id/idtxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stuent ID"
+            android:text="Stuent Name"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
@@ -46,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idedit"
-            android:text="1"
+            android:hint="Enter student name here"
             android:textSize="18dp"
             android:layout_marginStart="50dp"
             >

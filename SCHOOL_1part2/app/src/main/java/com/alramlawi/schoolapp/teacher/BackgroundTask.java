@@ -51,7 +51,7 @@ public class BackgroundTask extends AsyncTask<String,Void,Void> {
             OutputStream OS=httpURLConnection.getOutputStream();
             BufferedWriter bufferedWriter=new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
 
-            String data= URLEncoder.encode("stud_id","UTF-8")+"="+URLEncoder.encode(stud_id,"UTF-8")+"&"+
+            String data= URLEncoder.encode("stud_name","UTF-8")+"="+URLEncoder.encode(stud_id,"UTF-8")+"&"+
                     URLEncoder.encode("sub1","UTF-8")+"="+URLEncoder.encode(sub1,"UTF-8")+"&"+
                     URLEncoder.encode("sub1tot","UTF-8")+"="+URLEncoder.encode(sub1tot,"UTF-8")+"&"+
 

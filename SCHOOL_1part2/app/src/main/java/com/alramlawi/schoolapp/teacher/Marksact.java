@@ -23,14 +23,14 @@ import java.net.URLEncoder;
 public class Marksact extends AppCompatActivity {
     EditText sub1score,sub1total,sub2score,sub2total,sub3score,sub3total,sub4score,sub4total,sub5score,sub5total;
     Button submitbtn;
-    EditText studid;
+    EditText studname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marksact);
 
-        studid=findViewById(R.id.idedit);
+        studname=findViewById(R.id.idedit);
 
         sub1score=findViewById(R.id.sub1scoreedit);
         sub1total=findViewById(R.id.sub1totaledit);
@@ -53,7 +53,7 @@ public class Marksact extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String stud_id=studid.getText().toString();  //update stud_id here.
+                String stud_name=studname.getText().toString();  //update stud_id here.
 
                 String sub1= sub1score.getText().toString();
                 String sub1tot=sub1total.getText().toString();
@@ -71,7 +71,7 @@ public class Marksact extends AppCompatActivity {
                 String sub5tot=sub5total.getText().toString();
 
                 BackgroundTask backgroundTask=new BackgroundTask(view.getContext());
-                backgroundTask.execute(sub1,sub1tot,sub2,sub2tot,sub3,sub3tot,sub4,sub4tot,sub5,sub5tot,stud_id);
+                backgroundTask.execute(sub1,sub1tot,sub2,sub2tot,sub3,sub3tot,sub4,sub4tot,sub5,sub5tot,stud_name);
 
                 Toast.makeText(Marksact.this, "Marks are entered!", Toast.LENGTH_SHORT).show();
 
