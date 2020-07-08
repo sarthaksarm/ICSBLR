@@ -37,14 +37,14 @@ public class Student_result extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String name = preferences.getString("name", "");
 
-        sub1=findViewById(R.id.sub1score);
-        sub2=findViewById(R.id.sub2score);
-        sub3=findViewById(R.id.sub3score);
-        sub4=findViewById(R.id.sub4score);
-        sub5=findViewById(R.id.sub5score);
+        sub1=findViewById(R.id.sub10score);
+        sub2=findViewById(R.id.sub20score);
+        sub3=findViewById(R.id.sub30score);
+        sub4=findViewById(R.id.sub40score);
+        sub5=findViewById(R.id.sub50score);
 
-        subtotal=findViewById(R.id.sumscore);
-        subpercent=findViewById(R.id.subpercscore);
+        subtotal=findViewById(R.id.sumscore10);
+        subpercent=findViewById(R.id.subpercscore10);
 
         new Connection().execute(name);
     }

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context="com.alramlawi.schoolapp.teacher.Marksact"
     >
 <RelativeLayout
@@ -16,6 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Enter Marks!"
         android:layout_centerHorizontal="true"
+        android:textColor="#FFC400"
         android:fontFamily="serif"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -40,12 +42,15 @@
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
+            android:textColor="#FFC400"
             />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idedit"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             android:hint="Enter student name here"
             android:textSize="18dp"
             android:layout_marginStart="50dp"
@@ -62,17 +67,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@+id/linearltid"
         >
         <TextView
             android:id="@+id/sub1txt"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Subject 1"
+            android:text="English"
+            android:textColor="#FFC400"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
             />
 
         <EditText
@@ -81,7 +88,9 @@
             android:id="@+id/sub1scoreedit"
             android:text="78"
             android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginStart="20dp"
             >
 
         </EditText>
@@ -89,6 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </TextView>
@@ -98,6 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -110,17 +123,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@+id/linearlt1"
         >
         <TextView
             android:id="@+id/sub2txt"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Subject 2"
+            android:text="Kannada"
+            android:textColor="#FFC400"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
 
             />
         <EditText
@@ -129,7 +144,9 @@
             android:id="@+id/sub2scoreedit"
             android:text="78"
             android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -137,6 +154,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </TextView>
@@ -146,6 +165,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -159,18 +180,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@+id/linearlt2"
 
         >
         <TextView
             android:id="@+id/sub3txt"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Subject 3"
+            android:text="Maths"
             android:textStyle="bold"
+            android:textColor="#FFC400"
             android:fontFamily="serif"
             android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
 
             />
         <EditText
@@ -179,7 +202,9 @@
             android:id="@+id/sub3scoreedit"
             android:text="78"
             android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -187,6 +212,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </TextView>
@@ -196,6 +223,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -209,18 +238,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@+id/linearlt3"
 
         >
         <TextView
             android:id="@+id/sub4txt"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Subject 4"
+            android:text="Science"
+            android:textColor="#FFC400"
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
             />
         <EditText
             android:layout_width="wrap_content"
@@ -228,7 +259,9 @@
             android:id="@+id/sub4scoreedit"
             android:text="78"
             android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -236,6 +269,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </TextView>
@@ -245,6 +280,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>
@@ -258,18 +295,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
         android:layout_below="@+id/linearlt4"
 
         >
         <TextView
             android:id="@+id/sub5txt"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Subject 5"
+            android:text="Social Science"
+            android:textColor="#FFC400"
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+
             />
         <EditText
             android:layout_width="wrap_content"
@@ -277,7 +317,9 @@
             android:id="@+id/sub5scoreedit"
             android:text="78"
             android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:layout_marginStart="20dp"
             >
 
         </EditText>
@@ -285,6 +327,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </TextView>
@@ -294,6 +338,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
             >
 
         </EditText>

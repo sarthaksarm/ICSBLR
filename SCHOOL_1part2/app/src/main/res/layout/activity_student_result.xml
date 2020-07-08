@@ -3,17 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context="com.alramlawi.schoolapp.Student_result">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFC400"
         android:text="RESULT!"
         android:layout_centerHorizontal="true"
         android:fontFamily="serif"
-        android:textSize="18dp"
+        android:textSize="22dp"
         android:textStyle="bold"
         android:layout_marginTop="40dp"
         android:id="@+id/resheadingtxt"
@@ -21,9 +24,11 @@
     <LinearLayout
         android:id="@+id/linearlt1"
         android:layout_marginTop="70dp"
-        android:layout_width="match_parent"
+        android:textColor="#fff"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:weightSum="0.5"
         android:gravity="center"
         android:layout_below="@+id/resheadingtxt"
         >
@@ -31,19 +36,12 @@
         android:id="@+id/sub1txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Subject 1"
+        android:text="English"
+        android:textColor="#FFC400"
         android:textStyle="bold"
         android:fontFamily="serif"
         android:textSize="18dp"
 
-        />
-    <TextView
-        android:id="@+id/sub1score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="78/100"
-        android:textSize="18dp"
-        android:layout_marginStart="50dp"
         />
 
     </LinearLayout>
@@ -51,30 +49,23 @@
     <LinearLayout
         android:id="@+id/linearlt2"
         android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearlt1"
+        android:weightSum="0.5"
 
         >
         <TextView
             android:id="@+id/sub2txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject 2"
+            android:text="Kannada"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
-
-            />
-        <TextView
-            android:id="@+id/sub2score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="78/100"
-            android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:textColor="#FFC400"
 
             />
 
@@ -83,30 +74,23 @@
     <LinearLayout
         android:id="@+id/linearlt3"
         android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearlt2"
+        android:weightSum="0.5"
 
         >
         <TextView
             android:id="@+id/sub3txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject 3"
+            android:text="Maths"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:textSize="18dp"
-
-            />
-        <TextView
-            android:id="@+id/sub3score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="78/100"
-            android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:textColor="#FFC400"
 
             />
 
@@ -115,29 +99,23 @@
     <LinearLayout
         android:id="@+id/linearlt4"
         android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearlt3"
+        android:weightSum="0.5"
 
         >
         <TextView
             android:id="@+id/sub4txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject 4"
+            android:text="Science"
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
-            />
-        <TextView
-            android:id="@+id/sub4score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="78/100"
-            android:textSize="18dp"
-            android:layout_marginStart="50dp"
+            android:textColor="#FFC400"
 
             />
 
@@ -146,41 +124,36 @@
     <LinearLayout
         android:id="@+id/linearlt5"
         android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearlt4"
+        android:weightSum="0.5"
 
         >
         <TextView
             android:id="@+id/sub5txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subject 5"
+            android:text="Social Science"
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
+            android:textColor="#FFC400"
             />
-        <TextView
-            android:id="@+id/sub5score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="78/100"
-            android:textSize="18dp"
-            android:layout_marginStart="50dp"
 
-            />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearltsum"
-        android:layout_marginTop="60dp"
-        android:layout_width="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearlt5"
+        android:weightSum="0.5"
 
         >
         <TextView
@@ -191,15 +164,7 @@
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
-            />
-        <TextView
-            android:id="@+id/sumscore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="390/500"
-            android:textSize="18dp"
-            android:layout_marginStart="50dp"
-
+            android:textColor="#FF9100"
             />
 
     </LinearLayout>
@@ -207,11 +172,12 @@
     <LinearLayout
         android:id="@+id/linearltpercent"
         android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_below="@+id/linearltsum"
+        android:weightSum="0.5"
 
         >
         <TextView
@@ -222,18 +188,189 @@
             android:textSize="18dp"
             android:textStyle="bold"
             android:fontFamily="serif"
+            android:textColor="#FF9100"
             />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlt10"
+        android:layout_marginTop="70dp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/linearlt1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="0.5"
+        android:gravity="center"
+        android:layout_below="@+id/resheadingtxt"
+        >
+
         <TextView
-            android:id="@+id/subpercscore"
+            android:id="@+id/sub10score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78/100"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlt20"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="0.5"
+        android:layout_toEndOf="@+id/linearlt2"
+        android:layout_below="@+id/linearlt10"
+
+        >
+
+        <TextView
+            android:id="@+id/sub20score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78/100"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlt30"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_toEndOf="@id/linearlt3"
+        android:layout_below="@+id/linearlt20"
+        android:weightSum="0.5"
+
+        >
+
+        <TextView
+            android:id="@+id/sub30score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78/100"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlt40"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearlt30"
+        android:weightSum="0.5"
+    android:layout_toEndOf="@+id/linearlt4"
+        >
+
+        <TextView
+            android:id="@+id/sub40score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78/100"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlt50"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearlt40"
+        android:weightSum="0.5"
+        android:layout_toEndOf="@+id/linearlt5"
+        >
+        <TextView
+            android:id="@+id/sub50score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="78/100"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearltsum10"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearlt50"
+        android:weightSum="0.5"
+        android:layout_toEndOf="@+id/linearltsum"
+        >
+        <TextView
+            android:id="@+id/sumscore10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="390/500"
+            android:textSize="18dp"
+            android:layout_marginStart="50dp"
+            android:textColor="#fff"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearltpercent10"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/linearltsum"
+        android:weightSum="0.5"
+        android:layout_toEndOf="@+id/linearltpercent"
+        >
+        <TextView
+            android:id="@+id/subpercscore10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="78.0%"
             android:textSize="18dp"
             android:layout_marginStart="50dp"
+            android:textColor="#fff"
 
             />
 
     </LinearLayout>
+
+
+
+
+
 
 
 
