@@ -18,6 +18,9 @@
         <activity android:name=".teacher.Marksact"> </activity>
         <activity android:name=".Student_att" />
         <activity android:name=".MessageActivity" />
+        <activity android:name=".LiveVideo"
+            android:screenOrientation="portrait">
+        </activity>
 
          <activity android:name=".Splash">
          <intent-filter>

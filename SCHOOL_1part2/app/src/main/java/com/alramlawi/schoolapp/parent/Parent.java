@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.alramlawi.schoolapp.HttpParse;
+import com.alramlawi.schoolapp.LiveVideo;
 import com.alramlawi.schoolapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -50,16 +51,20 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//
-//            @Override
-//            public boolean onNavigationItemSelected(MenuItem menuItem) {
-//                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//                fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
-//                        android.R.anim.fade_out);
-//
-//                switch (menuItem.getItemId()) {
-//
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
+                        android.R.anim.fade_out);
+
+                switch (menuItem.getItemId()) {
+
+                    case R.id.nav_video: Intent i=new Intent(Parent.this, LiveVideo.class);
+                    startActivity(i);
+                    break;
+
 //
 //                    case R.id.track:
 //
@@ -69,19 +74,19 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
 //                        startActivity(i2);
 //                        break;
 //
-//
-//                    default:
-//
-//                        break;
-//
-//                }
-//
-//                //   loadHomeFragment();
-//
-//                return true;
-//            }
-//        });
-//
+
+                    default:
+
+                        break;
+
+                }
+
+                //  loadHomeFragment();
+
+                return true;
+            }
+        });
+
 
 
     }

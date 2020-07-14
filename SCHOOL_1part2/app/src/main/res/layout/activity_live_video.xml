@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="match_parent"
+    tools:context=".LiveVideo">
+
+    <RelativeLayout
+        android:id="@+id/rlvideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:id="@+id/myvideo"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/myvideo"
+
+        />
+    <ProgressBar
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/myprogress"
+        android:layout_marginTop="85dp"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/playpause"
+        android:src="@drawable/pw"
+        android:layout_marginTop="96dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:id="@+id/full"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="14dp"
+        android:src="@drawable/fullscreen" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rlvideo"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/desc"
+        android:textColor="#ffd700"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="35dp"
+        />
+    </ScrollView>
+</RelativeLayout>
+
