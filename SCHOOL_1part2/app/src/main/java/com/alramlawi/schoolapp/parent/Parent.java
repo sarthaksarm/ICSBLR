@@ -51,8 +51,8 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -65,30 +65,23 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
                     startActivity(i);
                     break;
 
-//
-//                    case R.id.track:
-//
-//                        String url2 = "https://www.google.com/android/find?u=0";
-//                        Intent i2 = new Intent(Intent.ACTION_VIEW);
-//                        i2.setData(Uri.parse(url2));
-//                        startActivity(i2);
-//                        break;
-//
+                    case R.id.track:
+
+                        String url2 = "https://www.google.com/android/find?u=0";
+                        Intent i2 = new Intent(Intent.ACTION_VIEW);
+                        i2.setData(Uri.parse(url2));
+                        startActivity(i2);
+                        break;
 
                     default:
-
                         break;
 
                 }
 
                 //  loadHomeFragment();
-
                 return true;
             }
         });
-
-
-
     }
 
     @Override

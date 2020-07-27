@@ -22,9 +22,10 @@
             android:id="@+id/nav_pay"
             android:icon="@drawable/ic_payment_black_24dp"
             android:title="@string/menu_pay" />
+
         <item android:id="@+id/track"
             android:title="Track"
-            android:icon="@drawable/ic_add_location_black_24dp"></item>
+            android:icon="@drawable/ic_add_location_black_24dp"/>
 
         <item
             android:id="@+id/nav_video"

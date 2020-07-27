@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.alramlawi.schoolapp.LiveVideo;
 import com.alramlawi.schoolapp.R;
+import com.alramlawi.schoolapp.parent.Parent;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -33,7 +35,7 @@ public class Student extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.student_nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.student_nav_view);
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -46,31 +48,39 @@ public class Student extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.setCustomAnimations(android.R.anim.fade_in,
+                        android.R.anim.fade_out);
 
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.student_nav_view);
-//
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//
-//            @Override
-//            public boolean onNavigationItemSelected(MenuItem menuItem) {
-//
-//
-//                switch (menuItem.getItemId()) {
-//
-//
-//                    case R.id.nav_track:
-//
-//                                              break;
-//
-//
-//                    default:
-//
-//                        break;
-//
-//                }
-//                return true;
-//            }
-//        });
+                switch (menuItem.getItemId()) {
+
+                    case R.id.nav_video: Intent i=new Intent(Student.this, LiveVideo.class);
+                        startActivity(i);
+                        break;
+
+                    case R.id.track:
+
+                        String url2 = "https://www.google.com/android/find?u=0";
+                        Intent i2 = new Intent(Intent.ACTION_VIEW);
+                        i2.setData(Uri.parse(url2));
+                        startActivity(i2);
+                        break;
+
+
+                    default:
+
+                        break;
+
+                }
+
+                //  loadHomeFragment();
+
+                return true;
+            }
+        });
 
 
     }
