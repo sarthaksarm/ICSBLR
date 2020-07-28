@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
         parents = findViewById(R.id.parentsBn);
         admin = findViewById(R.id.adminBn);
 
-        FirebaseMessaging.getInstance().subscribeToTopic("general").addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                                                              @Override
-                                                                                              public void onComplete(@NonNull Task<Void> task) {
-
-                                                                                              }
-                                                                                          });
-
+//        FirebaseMessaging.getInstance().subscribeToTopic("general").addOnCompleteListener(new OnCompleteListener<Void>() {
+//                                                                                              @Override
+//                                                                                              public void onComplete(@NonNull Task<Void> task) {
+//
+//                                                                                              }
+//                                                                                          });
+//
 
                 sharedPreferences = getSharedPreferences("Data", MODE_PRIVATE);
         editor = sharedPreferences.edit();

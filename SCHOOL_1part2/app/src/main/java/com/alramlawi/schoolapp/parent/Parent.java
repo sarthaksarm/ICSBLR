@@ -77,6 +77,10 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
                         startActivity(in);
                         break;
 
+                    case R.id.fee_details: Intent inte=new Intent(Parent.this, Fee_details.class);
+                        startActivity(inte);
+                        break;
+
                     default:
                         break;
 

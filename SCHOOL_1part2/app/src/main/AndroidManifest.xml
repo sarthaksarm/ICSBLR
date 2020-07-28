@@ -12,13 +12,14 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-        <activity android:name=".Splash"></activity>
-        <activity android:name=".teacher.Marksact"></activity>
+        <activity android:name=".parent.Fee_details"></activity>
+        <activity android:name=".Splash" />
+        <activity android:name=".teacher.Marksact" />
         <activity android:name=".Student_att" />
         <activity android:name=".MessageActivity" />
         <activity
             android:name=".LiveVideo"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".parent.ImageGallery">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +30,7 @@
         <activity
             android:name=".student.Student"
             android:label="@string/title_activity_student" />
-        <activity android:name=".Student_result"></activity>
+        <activity android:name=".Student_result" />
         <activity
             android:name=".parent.Parent"
             android:label="@string/title_activity_parents"
@@ -50,11 +51,11 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

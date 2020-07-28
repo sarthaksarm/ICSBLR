@@ -18,7 +18,11 @@
             android:icon="@drawable/counter"
             android:title="Send SMS" />
         <item
+            android:id="@+id/fee_details"
+            android:icon="@drawable/ic_fee_details"
+            android:title="Fee Details" />
 
+        <item
             android:id="@+id/nav_pay"
             android:icon="@drawable/ic_payment_black_24dp"
             android:title="@string/menu_pay" />

@@ -12,6 +12,11 @@ import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LiveVideo extends AppCompatActivity {
     private VideoView mainVideoView;
@@ -26,7 +31,6 @@ public class LiveVideo extends AppCompatActivity {
     int flag=0;
     String name1;
     TextView desc;
-    String url="https://firebasestorage.googleapis.com/v0/b/sihotp-cc4af.appspot.com/o/ScInk%201.3%20Final%20(1)%20(1).mp4?alt=media&token=f8d602bc-74c7-4212-a42d-6901ad6c88c4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,63 +42,79 @@ public class LiveVideo extends AppCompatActivity {
         fullbtn=findViewById(R.id.full);
         playbtn=findViewById(R.id.playpause);
 
-                    videuri= Uri.parse(url);
-                    mainVideoView.setVideoURI(videuri);
-                    mainVideoView.requestFocus();
-                    mainVideoView.start();
-                    playbtn.setVisibility(View.INVISIBLE);
-                    fullbtn.setVisibility(View.INVISIBLE);
-                    // currentprogress1.setVisibility(View.INVISIBLE);
-                    mainVideoView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            playbtn.setVisibility(View.VISIBLE);
-                            fullbtn.setVisibility(View.VISIBLE);
-                        }
-                    });
-                    playbtn.setVisibility(View.INVISIBLE);
-                    mainVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+        DatabaseReference ref= FirebaseDatabase.getInstance().getReference("admin").child("videos");
 
-                        @Override
-                        public void onPrepared(MediaPlayer mp) {
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String url=dataSnapshot.getValue().toString();
 
-                            duration=mp.getDuration()/1000;
-                            mp.start();
+                if(url.isEmpty())
+                    url="https://firebasestorage.googleapis.com/v0/b/sihotp-cc4af.appspot.com/o/ScInk%201.3%20Final%20(1)%20(1).mp4?alt=media&token=f8d602bc-74c7-4212-a42d-6901ad6c88c4";
 
-                            mp.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
+                videuri= Uri.parse(url);
+                mainVideoView.setVideoURI(videuri);
+                mainVideoView.requestFocus();
+                mainVideoView.start();
+                playbtn.setVisibility(View.INVISIBLE);
+                fullbtn.setVisibility(View.INVISIBLE);
+                // currentprogress1.setVisibility(View.INVISIBLE);
+                mainVideoView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) { playbtn.setVisibility(View.VISIBLE);
+                        fullbtn.setVisibility(View.VISIBLE);
+                    }
+                });
 
-                                @Override
-                                public void onVideoSizeChanged(MediaPlayer mp, int arg1, int arg2) {
-                                    // TODO Auto-generated method stub
-                                    // Log.e(TAG, "Changed");
-                                    currentprogress.setVisibility(View.GONE);
-                                    mp.start();
-                                }
-                            });
+                playbtn.setVisibility(View.INVISIBLE);
+                mainVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
 
-                        }
-                    });
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
 
-                    playbtn.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
+                        duration=mp.getDuration()/1000;
+                        mp.start();
 
-                            if(flag==0) {
-                                mainVideoView.pause();
-                                flag=1;
-                                playbtn.setImageResource(R.drawable.wp);
+                        mp.setOnVideoSizeChangedListener(new MediaPlayer.OnVideoSizeChangedListener() {
 
+                            @Override
+                            public void onVideoSizeChanged(MediaPlayer mp, int arg1, int arg2) {
+                                // TODO Auto-generated method stub
+                                // Log.e(TAG, "Changed");
+                                currentprogress.setVisibility(View.GONE);
+                                mp.start();
                             }
-                            else
-                            {
-                                mainVideoView.start();
-                                flag=0;
-                                playbtn.setImageResource(R.drawable.pw);
-                                playbtn.setVisibility(View.INVISIBLE);
-                                fullbtn.setVisibility(View.INVISIBLE);
-                            }
+                        });
+
+                    }
+                });
+
+                playbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(flag==0) {
+                            mainVideoView.pause();
+                            flag=1;
+                            playbtn.setImageResource(R.drawable.wp);
+
                         }
-                    });
+                        else
+                        {
+                            mainVideoView.start();
+                            flag=0;
+                            playbtn.setImageResource(R.drawable.pw);
+                            playbtn.setVisibility(View.INVISIBLE);
+                            fullbtn.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
                 }
-
 }

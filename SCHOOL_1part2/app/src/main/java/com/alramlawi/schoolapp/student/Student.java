@@ -56,32 +56,25 @@ public class Student extends AppCompatActivity {
                         android.R.anim.fade_out);
 
                 switch (menuItem.getItemId()) {
-
                     case R.id.nav_video: Intent i=new Intent(Student.this, LiveVideo.class);
                         startActivity(i);
                         break;
 
                     case R.id.track:
-
                         String url2 = "https://www.google.com/android/find?u=0";
                         Intent i2 = new Intent(Intent.ACTION_VIEW);
                         i2.setData(Uri.parse(url2));
                         startActivity(i2);
                         break;
 
-
                     default:
-
                         break;
-
                 }
-
                 //  loadHomeFragment();
 
                 return true;
             }
         });
-
 
     }
 
