@@ -21,7 +21,7 @@
 
         <item
             android:id="@+id/id_card"
-            android:icon="@drawable/ic_video"
+            android:icon="@drawable/ic_id_card"
             android:title="ID Card Details" />
 
         <item

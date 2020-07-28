@@ -66,6 +66,8 @@ public class Student extends AppCompatActivity {
                         i2.setData(Uri.parse(url2));
                         startActivity(i2);
                         break;
+                    case R.id.id_card:  Intent in=new Intent(Student.this, ID_card_details.class);
+                        startActivity(in);
 
                     default:
                         break;

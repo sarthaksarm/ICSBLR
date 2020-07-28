@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.alramlawi.schoolapp.student.ID_card_details">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="ID CARD DETAILS"
+        android:fontFamily="serif"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18dp"
+        android:layout_marginStart="100dp"
+        android:textColor="@color/colorOrange"
+        android:layout_marginTop="200dp"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameanstxt"
+        android:layout_alignBaseline="@+id/nametxt"
+        android:text="ABC"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_marginTop="200dp"
+        android:fontFamily="serif"
+        android:layout_alignStart="@+id/nametxt"
+        android:layout_marginStart="200dp"
+        />
+
+    <TextView
+        android:id="@+id/idnotxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Card Number"
+        android:textSize="18dp"
+        android:layout_marginStart="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/nametxt"
+        android:textColor="@color/colorOrange"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/idnoanstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/idnotxt"
+        android:text="123"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_below="@+id/nameanstxt"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:layout_alignStart="@+id/idnotxt"
+        android:layout_marginStart="200dp"
+        />
+
+
+    <TextView
+        android:id="@+id/classtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class"
+        android:textSize="18dp"
+        android:layout_marginStart="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/idnotxt"
+        android:textColor="@color/colorOrange"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/classanstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/classtxt"
+        android:text="VI"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_below="@+id/idnoanstxt"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:layout_alignStart="@+id/classtxt"
+        android:layout_marginStart="200dp"
+        />
+
+    <TextView
+        android:id="@+id/sectiontxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Section"
+        android:textSize="18dp"
+        android:layout_marginStart="100dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/classtxt"
+        android:textColor="@color/colorOrange"
+        android:fontFamily="serif"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/secanstxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sectiontxt"
+        android:text="B"
+        android:textSize="18dp"
+        android:textColor="#fff"
+        android:layout_below="@+id/classanstxt"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:layout_alignStart="@+id/sectiontxt"
+        android:layout_marginStart="200dp"
+        />
+
+</RelativeLayout>
