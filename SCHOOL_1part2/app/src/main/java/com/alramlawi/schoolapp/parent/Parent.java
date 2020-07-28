@@ -73,6 +73,10 @@ public class Parent extends AppCompatActivity implements PaymentResultListener {
                         startActivity(i2);
                         break;
 
+                    case R.id.nav_gallery:   Intent in=new Intent(Parent.this, ImageGallery.class);
+                        startActivity(in);
+                        break;
+
                     default:
                         break;
 

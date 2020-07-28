@@ -26,7 +26,10 @@
         <item android:id="@+id/track"
             android:title="Track"
             android:icon="@drawable/ic_add_location_black_24dp"/>
-
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_image_gallery"
+            android:title="Gallery" />
         <item
             android:id="@+id/nav_video"
             android:icon="@drawable/ic_video"

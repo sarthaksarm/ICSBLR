@@ -9,6 +9,7 @@
     <color name="demo_dark_transparent">#24000000</color>
     <color name="colorDisable">#706B69</color>
     <color name="blue_white2">#FFFFFF</color>
+    <color name="darker_grey">#494747</color>
 
 
 </resources>
