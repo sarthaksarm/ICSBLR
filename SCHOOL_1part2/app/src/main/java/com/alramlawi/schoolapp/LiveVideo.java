@@ -1,5 +1,6 @@
 package com.alramlawi.schoolapp;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -13,17 +14,6 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -90,12 +80,7 @@ public class LiveVideo extends AppCompatActivity {
                     inputStream = httpURLConnection.getInputStream();
                 }
 
-                httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setDoInput(true);
-                httpURLConnection.setDoOutput(true);
-
                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-                Toast.makeText(LiveVideo.this, "connection= "+httpURLConnection, Toast.LENGTH_SHORT).show();
 
                 line = reader.readLine() + "";
 
@@ -107,18 +92,12 @@ public class LiveVideo extends AppCompatActivity {
             return line;
         }
 
-
         @Override
         protected void onPostExecute(String s) {
-
+            final String url;
             try {
+                url= s.replace("\"","");
 
-                String url = s;
-
-              //  if (url.isEmpty())
-              //     url = "https://firebasestorage.googleapis.com/v0/b/sihotp-cc4af.appspot.com/o/ScInk%201.3%20Final%20(1)%20(1).mp4?alt=media&token=f8d602bc-74c7-4212-a42d-6901ad6c88c4";
-
-                Toast.makeText(LiveVideo.this, "URL= " + url, Toast.LENGTH_SHORT).show();
                 videuri = Uri.parse(url);
                 mainVideoView.setVideoURI(videuri);
                 mainVideoView.requestFocus();
@@ -153,6 +132,17 @@ public class LiveVideo extends AppCompatActivity {
                                 mp.start();
                             }
                         });
+
+                    }
+                });
+
+
+                fullbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i=new Intent(LiveVideo.this,VideoFull.class);
+                        i.putExtra("url",url);
+                        startActivity(i);
 
                     }
                 });
