@@ -12,16 +12,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:label">
-        <activity android:name=".student.ID_card_details"></activity>
+        <activity android:name=".student.ID_card_details">
+        </activity>
         <activity android:name=".parent.Fee_details" />
         <activity android:name=".Splash" />
         <activity android:name=".teacher.Marksact" />
         <activity android:name=".Student_att" />
         <activity android:name=".MessageActivity" />
         <activity
-            android:name=".LiveVideo"
+            android:name=".parent.ImageGallery"
             android:screenOrientation="portrait" />
-        <activity android:name=".parent.ImageGallery">
+        <activity android:name=".LiveVideo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,8 +53,6 @@
             </intent-filter>
         </service>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
